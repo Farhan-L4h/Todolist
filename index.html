@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="card">
+            <div class="input">
+                <input type="text" id="input-name" placeholder="Add a new todo" autocomplete="off">
+                <button id="add-btn">Add</button>
+            </div>
+            <hr>
+        </div>
+
+        <div class="card-2">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let btnSimpan = document.getElementById("add-btn");
+    let todoInput = document.getElementById("input-name"); 
+
+    btnSimpan.addEventListener('click', function () {
+        if (todoInput.value.trim() === '') {
+            alert('Tidak Boleh Kosong!!');
+        } else {
+            let listTodo = document.querySelector('.card-2');
+            let contentTodo = `
+            <div class="content">
+                <div class="list">
+                    <input type="checkbox" class="ceklis" id="ceklis-todo">
+                    <span>${todoInput.value}</span>
+                </div>
+                <button class="btn-x" id="delete-btn">X</button>
+            </div>
+        `;
+            listTodo.innerHTML += contentTodo;
+            todoInput.value = '';
+            todoInput.focus();
+        }
+
+        // checklis todo
+        let checkTodo = document.querySelectorAll('.ceklis');
+        for (let i = 0; i < checkTodo.length; i++) {
+            const input = checkTodo[i];
+            input.addEventListener('change', function () {
+                let todoSpan = input.nextElementSibling
+                todoSpan.classList.toggle("text-coret")
+            })
+        }
+
+        let btnDelete = document.querySelectorAll('.btn-x');
+        for (let p = 0; p < btnDelete.length; p++) {
+            const hapus= btnDelete[p];
+            hapus.addEventListener('click', function() {
+                this.parentElement.remove();
+            })
+        }
+
+    });
+
+
+
+</script>
+
+</html>

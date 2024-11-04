@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 0 10px 0 rgba(97, 97, 97, 0.1);
+    border-radius: 5px;
+}
+
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 5px;
+}
+
+#add-btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(39, 80, 195);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.content {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba(97, 97, 97, 0.1);
+}
+
+.btn-x {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.card-2 {
+   margin-top: auto;
+    width: 300px;
+}
+
+.text-coret {
+    text-decoration: line-through;
+}
